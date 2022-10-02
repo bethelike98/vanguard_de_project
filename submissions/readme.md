@@ -26,23 +26,27 @@ correlation_matrix_viz.py shows a correlation matrix/heatmap using track feature
 danceability_per_artist_viz.py shows violin charts of danceability per artist. A violin plot depicts distributions of numeric data for one or more groups using density curves.
 longest_song_viz.py shows bar charts of the top 5 longest songs (in ms) per artist and the name of each song.
 
-Spotify Database ERD
+## Spotify Database ERD
 <img width="1361" alt="Spotify Database ERD" src="https://user-images.githubusercontent.com/87020742/193469214-1966dc3c-c08b-4401-bbef-7a1484be55b1.png">
 
-├── vanguard_de_project
+## Tools Used
+Python, SQLite, Pandas, Spotipy API, Matplotlib, Seaborn
+
+```
+├── vanguard_de_project 
 │   ├── submissions
 │   │   ├── Ingestion_Extraction_Code
-│   │   |   ├── extract_transform.py
-│   │   |   ├── functions.py
+│   │   |   ├── extract_transform.py                    #Dropped nulls and duplicates from DataFrames
+│   │   |   ├── functions.py                            #Used Spotipy API to create JSON which was converted into DataFrame.
 │   │   ├── SQLite_Code
-│   │   |   ├── db_creation.py
-│   │   |   ├── spotify.db
-│   │   |   ├── table_creation_queries.py
-│   │   |   ├── view_creation_queries.py
+│   │   |   ├── db_creation.py                          #Created & connected to Database, created views & tops
+│   │   |   ├── spotify.db                              #Database
+│   │   |   ├── table_creation_queries.py               #Query used to create Tables.
+│   │   |   ├── view_creation_queries.py                #Query Used to create views
 │   │   ├── Visualization_Code
-│   │   |   ├── correlation_matrix_viz.py
-│   │   |   ├── danceability_per_artist_viz.py
-│   │   |   ├── longest_song_viz.py
+│   │   |   ├── correlation_matrix_viz.py               #Correlation matrix of track feature metrics
+│   │   |   ├── danceability_per_artist_viz.py          #Violin chart of danceability by artist
+│   │   |   ├── longest_song_viz.py                     #Bar chart of top 5 longest songs by artist.
 │   │   ├── .DS_Store
 │   │   ├── Ingestion_Extraction_Code
 │   |   ├── views
@@ -52,3 +56,4 @@ Spotify Database ERD
 │   ├── .gitignore
 │   ├── README.md
 │   ├── spotipy_sample.py
+```
